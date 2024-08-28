@@ -1,0 +1,50 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+SRC = bsq.c
+NAME = bsq
+
+all: $(NAME)
+
+$(NAME): $(SRC)
+    $(CC) $(CFLAGS) -o $(NAME) $(SRC)
+
+clean:
+    rm -f $(NAME)
+
+fclean: clean
+
+re: fclean all
+
+
+ 
+
+
+//execute
+
+make
+./bsq example_file
+
+
+
+
+
+
+Structures:
+
+t_map_info: Stores map metadata (number of lines, empty, obstacle, full characters).
+t_square: Stores the largest square’s size, and its top-right corner position.
+Helper Functions:
+
+Basic utility functions (ft_putchar, ft_putstr, etc.).
+ft_malloc: Allocates memory with error handling.
+parse_map_info: Parses the first line to retrieve the map information.
+validate_map: Checks if the map conforms to the rules (same line length, correct characters, etc.).
+find_largest_square: Uses dynamic programming to locate the largest square.
+fill_square: Marks the largest square on the map using the full character.
+print_map: Prints the processed map with the filled square.
+Main Logic:
+
+File Reading: Reads the file content into a buffer, splits it into lines, and validates the map.
+Square Finding: Computes the largest square and modifies the map.
+Error Handling: Prints errors for invalid maps.
+Multiple Files: Handles multiple files as input.

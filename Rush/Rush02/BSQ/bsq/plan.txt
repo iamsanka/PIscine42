@@ -1,0 +1,33 @@
+
+
+
+To do list
+
+Take the file name from the input.
+
+Open file
+
+Count file size, allocate memory for array
+
+turn the file into an array
+
+Iterate through the array, if pixel is an empty spot check for max size
+
+Checking max size 
+{
+Check how many spaces on current row, store it into another array.
+go to next row and repeat, store into next slot
+repeat until out of lines or runs into an obstable.
+
+count max size. Rows * smallest column in those rows
+
+If max size > stored max size swap stored max size //either pass the location or just calculate in the end
+}
+
+print the array
+
+empty the text file
+
+turn the array back into txt 
+
+create library
